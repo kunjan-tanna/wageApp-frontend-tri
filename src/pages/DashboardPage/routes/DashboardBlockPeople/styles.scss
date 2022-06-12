@@ -1,0 +1,63 @@
+@import '../../../../styles/variables';
+
+.block-people {
+  .dashboard__page-content-block {
+    padding-top: 32px;
+  }
+}
+
+.blocked-users {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    button {
+      margin-left: auto;
+    }
+
+    .name-with-avatar {
+      display: flex;
+      align-items: center;
+
+      &__img,
+      &__icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      &__icon {
+        background-color: $selago;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon--profile-color {
+          width: 40px;
+          height: 40px;
+          background-size: 100%;
+        }
+      }
+
+      &__name {
+        color: $mine-shaft;
+        font-size: 14px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.no-blocked-users {
+  width: 100%;
+
+  &__item {
+    color: $mine-shaft;
+    font-size: 16px;
+
+    p {
+      margin: 0 auto;
+    }
+  }
+}

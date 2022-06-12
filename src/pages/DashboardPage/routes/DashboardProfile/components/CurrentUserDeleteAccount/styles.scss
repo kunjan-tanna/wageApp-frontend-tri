@@ -1,0 +1,73 @@
+@import "../../../../../../styles/mixins/bootstrap.scss";
+@import "../../../../../../styles/variables.scss";
+
+.delete-account {
+  padding: 10px 0;
+
+  &__content {
+    color: $mine-shaft;
+    font-size: 14px;
+    color: $mine-shaft;
+    margin-left: auto;
+    margin-right: auto;
+
+    .delete-btn {
+      text-decoration: underline;
+      padding: 0;
+      font-weight: bold;
+      background-color: transparent;
+      margin-left: 3px;
+      border: 0;
+    }
+  }
+
+  &__confirmation {
+    position: relative;
+    margin-top: -45px;
+
+    &.dashboard-card {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $mine-shaft;
+      font-weight: normal;
+      max-width: 70%;
+    }
+
+    .navigation {
+      margin-top: 16px;
+      width: 100%;
+
+      button {
+
+        &:first-of-type {
+          margin-right: 20px;
+          width: 159px;
+        }
+
+        &:last-of-type {
+          width: 215px;
+        }
+      }
+    }
+
+    &.loading {
+      .error-info {
+        color: $red;
+        margin: 10px 0 20px 0;
+      }
+
+      .spinner {
+        background: transparent;
+        padding-top: 20px;
+      }
+
+      button {
+        pointer-events: none;
+      }
+    }
+  }
+}

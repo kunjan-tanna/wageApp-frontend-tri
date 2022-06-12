@@ -1,0 +1,99 @@
+@import '../../../../styles/mixins/bootstrap.scss';
+@import '../../../../styles/variables.scss';
+
+.page-header-searchbox {
+  @include make-row;
+
+  &__search {
+    @include make-col-ready();
+    @include make-col(6);
+  }
+
+  &__search-wrapper {
+    display: flex;
+
+    &__input {
+      flex: 1;
+      border-right: 1px solid $medium-purple;
+
+      input {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+
+    &__select {
+      width: 150px;
+
+      > div {
+        border-radius: 0 10px 10px 0;
+
+        select {
+          color: $portage;
+        }
+      }
+    }
+  }
+
+  &__location {
+    @include make-col-ready();
+    @include make-col(5);
+  }
+
+  &__button {
+    @include make-col-ready();
+    @include make-col(1);
+  }
+}
+
+.offerList__displayTypeForMap {
+  align-items: center;
+}
+
+.page-header__nav-container__nav-menu {
+  padding-right: 0px;
+}
+.searchingOptons a.page-header__nav-container__logo {
+  width: 120px;
+  max-width: 120px;
+  padding: 0px;
+}
+.searchingOptons .search-form__field__location {
+  margin: 0 7.5px;
+  max-width: 31.33333%;
+}
+.searchingOptons .search-form__field__search {
+  max-width: 26.33333%;
+}
+.searchingOptons .search-form__field__radius {
+  min-width: 156px;
+  padding: 0px;
+}
+.page-header__nav-container.searchingOptons__search-form {
+  margin: 0 auto;
+}
+.selectAlternative__overlay::before {
+  width: 33px !important;
+}
+
+.react-responsive-modal-modal {
+  max-width: 800px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  background: #ffffff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 10rem !important;
+  padding: 1.2rem !important;
+  position: relative;
+  overflow-y: auto;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+  border-radius: 0;
+}
+
+.locationModal p {
+  padding: 30px 10px 10px 10px;
+}
+.locationModal button:focus {
+  outline: none !important;
+}

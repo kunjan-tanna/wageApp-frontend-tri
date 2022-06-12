@@ -1,0 +1,75 @@
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  border: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+
+  &[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &--a {
+    width: 176px;
+    height: 40px;
+    border-radius: 0;
+    background: $turquoise;
+
+    &:hover,
+    &:focus {
+      background: $jungle-green;
+    }
+  }
+
+  &--b {
+    width: 215px;
+    height: 40px;
+    border-radius: 0;
+    background-color: $selago;
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &-color {
+      color: $white;
+      background-color: $turquoise;
+    }
+
+    &-color2 {
+      color: $white;
+      background-color: $watermelon;
+    }
+
+    &-keep {
+      width: auto;
+      height: 40px;
+      color: $white;
+      background-color: $turquoise;
+    }
+  }
+
+  &--link-style {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: $mine-shaft;
+    text-decoration: underline;
+    text-transform: none;
+    background: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

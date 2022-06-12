@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background: $white;
+  color: $mine-shaft;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+  padding: 32px;
+  border-radius: 10px;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 3px;
+    height: 32px;
+    width: 32px;
+    background-image: url(./spike.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--fixedWidth {
+    width: 500px;
+  }
+
+  &--open {
+    display: block;
+    margin-top: 10px;
+  }
+
+  &__number-inputs {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+
+    &__between {
+      width: 40px;
+      text-align: center;
+    }
+
+    .input {
+      width: 150px;
+
+      &__field {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.tooltipCloseHandler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  display: none;
+
+  &--open {
+    display: block;
+  }
+}

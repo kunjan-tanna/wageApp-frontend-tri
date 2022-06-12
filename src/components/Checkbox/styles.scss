@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.checkbox {
+
+  &__field {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    &:checked + .checkbox__label {
+      &:before {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath fill="%23FFF" fill-opacity="0" d="M0 0h32v32H0z"/%3E%3Cpath fill="%23483EE8" fill-rule="nonzero" d="M11.134 14.539a1.25 1.25 0 1 0-1.768 1.767l4.47 4.47a1.25 1.25 0 0 0 1.79-.025l7.24-7.641a1.25 1.25 0 0 0-1.814-1.72l-6.357 6.71-3.561-3.561z"/%3E%3C/g%3E%3C/svg%3E%0A');
+        background-position: center center;
+      }
+    }
+  }
+
+  &--error .checkbox__label {
+    &:before {
+      border: 1px $watermelon solid;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: $mine-shaft;
+
+    &:before {
+      width: 40px;
+      height: 40px;
+      content: '';
+      display: block;
+      margin-right: 15px;
+      border-radius: 10px;
+      background: $selago;
+    }
+
+    a {
+      margin-left: 4px;
+      color: $black;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+}

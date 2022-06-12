@@ -1,0 +1,69 @@
+@import '../../styles/mixins/bootstrap.scss';
+@import '../../styles/variables.scss';
+
+.dashboard {
+  padding: 40px 0 0;
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 128px;
+    background-color: $royal-blue;
+  }
+
+  &__page-content {
+    width: 100%;
+    min-height: 600px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    // box-shadow: 0 0 17px 0 rgba($black, 0.15);
+    // background-color: $catskill-white;
+    background: #fff;
+
+    .business-flag {
+      position: absolute;
+      top: 88px;
+      right: 40px;
+      z-index: 2;
+    }
+
+    &-block {
+      padding-left: 32px;
+      padding-right: 32px;
+      @include make-col(12);
+
+      &--notifications {
+        margin-top: 0;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    // background-color: $white;
+    background-color: #fbfbfb;
+    padding: 9px 24px;
+    border-radius: 0;
+    margin-bottom: 16px;
+    min-height: 88px;
+  }
+
+  &__row.row {
+    flex-wrap: nowrap;
+  }
+
+  .row {
+    margin: 0;
+  }
+}

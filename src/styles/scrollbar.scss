@@ -1,0 +1,25 @@
+@import './variables';
+
+.scrollarea {
+  height: 100%;
+  margin-right: 16px;
+  padding-right: 23px;
+  box-sizing: border-box;
+
+  .scrollbar-container {
+    opacity: 1 !important;
+    border-radius: 3px;
+    background: $white !important;
+
+    &.vertical {
+      width: 7px !important;
+    }
+
+    .scrollbar {
+      width: 7px !important;
+      margin-left: 0 !important;
+      border-radius: 3px;
+      background: $portage !important;
+    }
+  }
+}

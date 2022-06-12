@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.inputFieldAlternative {
+  position: relative;
+
+  &__input {
+    display: block;
+    border-radius: 10px;
+    background-color: $navy;
+    border: none;
+    height: 56px;
+    width: 100%;
+    padding-left: 23px;
+    padding-right: 23px;
+    color: $white;
+    font-size: 16px;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus, &:not(:placeholder-shown) {
+      padding-top: 18px;
+      padding-bottom: 0;
+      outline: none;
+
+      & + .inputFieldAlternative__placeholder {
+        transform: translate3d(0, -10px, 0);
+        font-size: 12px;
+        color: $portage;
+      }
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    margin-left: 23px;
+    top: 18px;
+    color: $white;
+    pointer-events: none;
+    transition: all 200ms;
+  }
+}

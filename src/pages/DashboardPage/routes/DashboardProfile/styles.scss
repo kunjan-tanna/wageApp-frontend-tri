@@ -1,0 +1,123 @@
+@import '../../../../styles/mixins/bootstrap.scss';
+@import '../../../../styles/variables.scss';
+
+.profile {
+  color: $jumbo;
+  padding-top: 10px;
+
+  &__photo-verify {
+    @include make-col(12);
+    align-items: center;
+    padding-top: 5px;
+  }
+
+  p.input__field {
+    line-height: 38px;
+  }
+
+  .input {
+    &__field {
+      padding: 20px 10px 0 30px;
+      background-color: transparent;
+      color: $mine-shaft;
+      font-size: 16px;
+      text-indent: 5px;
+      margin-bottom: 0;
+
+      &--error {
+        border: 0;
+      }
+    }
+
+    .validation-error {
+      padding-bottom: 16px;
+      justify-content: flex-start;
+    }
+
+    &__field-placeholder {
+      left: 35px;
+    }
+
+    &__icon {
+      left: 0;
+    }
+  }
+
+  &__data {
+    @include make-col(12);
+    margin: 37px 0 16px 0;
+
+    .dashboard-card {
+      flex-wrap: wrap;
+    }
+  }
+
+  .info-header {
+    margin-top: 16px;
+    @include make-col(12);
+    font-size: 24px;
+    color: $mine-shaft;
+  }
+
+  .data {
+    &__form {
+      @include make-col(12);
+      padding: 0 15px 20px 0;
+
+      &-buttons {
+        margin-top: 32px;
+
+        .btn {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &__navigation {
+      @include make-col(2);
+      align-items: baseline;
+      display: flex;
+      justify-content: flex-end;
+      padding: 21px 0 21px 0;
+
+      &--edit {
+        position: absolute;
+        right: 0;
+        top: -75px;
+      }
+    }
+  }
+}
+
+.modal-alternative {
+  &--edit-modal {
+    .modal-alternative {
+      &-content {
+        padding-left: 24px;
+        padding-right: 24px;
+
+        form {
+          .input,
+          .btn {
+            margin-top: 32px;
+          }
+
+          .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.react-responsive-modal-modal {
+  width: 50%;
+}
+
+.ConfirmBtn {
+  text-align: center;
+  margin: 16px 0px 0px 0px;
+}

@@ -1,0 +1,145 @@
+@import '../../../../../../styles/variables';
+
+.modal-alternative {
+  max-width: 1000px;
+  width: 100%;
+
+  &--multiple-offer-page {
+    color: $mine-shaft;
+    padding: 30px 15px;
+    overflow-y: auto;
+    max-height: 880px;
+
+    @media (max-height: 800px) {
+      max-height: 600px;
+    }
+
+    .scrollarea {
+      min-height: 60px;
+
+      max-height: 300px;
+
+      .scroll-container {
+        top: 10px;
+      }
+    }
+
+    .btn-close {
+      background: none;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      outline: none;
+      border: none;
+    }
+
+    .offer-info {
+      padding-left: 15px;
+      flex-shrink: 0;
+
+      &__data {
+        font-size: 15px;
+
+        span {
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .col-price {
+      width: 12.5%;
+    }
+
+    .col-title {
+      width: 30%;
+    }
+
+    .col-desc {
+      width: 52.5%;
+    }
+
+    .col-number {
+      width: 5%;
+    }
+
+    .multiple-offer-page__header {
+      padding-bottom: 30px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .category-select {
+      width: 250px;
+      padding-right: 15px;
+      flex-shrink: 0;
+    }
+  }
+
+  .multi-offer {
+    &__form {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+
+        .uploaded-files {
+          &__item {
+            width: 119px;
+            height: 119px;
+
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+
+            &:nth-child(4n) {
+              margin-right: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    &__caption {
+      display: flex;
+      width: 100%;
+      background-color: $selago;
+      font-size: 16px;
+    }
+
+    &__caption,
+    &__label {
+      padding: 15px;
+      border-bottom: 2px solid $catskill-white;
+      line-height: 1.2;
+    }
+
+    &__label {
+      display: flex;
+      width: 100%;
+      margin-bottom: 0;
+      font-size: 14px;
+      overflow: hidden;
+
+      &:hover {
+        overflow: visible;
+      }
+
+      input {
+        outline: none;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 30px;
+
+      .btn {
+        margin-left: 20px;
+      }
+    }
+  }
+}

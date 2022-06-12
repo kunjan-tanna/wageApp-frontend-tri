@@ -1,0 +1,44 @@
+@import '../../../../components/OfferList/variables';
+@import '../../../../styles/variables';
+
+.offerList {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &--grid {
+      column-width: 147px;
+      column-gap: $gap-size;
+      column-fill: balance;
+      column-count: 6;
+
+      .offerList__item {
+        break-inside: avoid-column;
+
+        &__date {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.related-box {
+  margin-top: 33px;
+  padding-bottom: 5px;
+  width: 100%;
+
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+    padding-left: 22px;
+    padding-bottom: 29px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $geyser;
+  }
+}

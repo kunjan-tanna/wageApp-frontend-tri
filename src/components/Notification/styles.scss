@@ -1,0 +1,146 @@
+@import '../../styles/variables';
+
+.notifications-item {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+
+  &.dashboard-card {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &--read {
+    .notifications-item {
+      &__data {
+        &__title {
+          &:before {
+            background-color: $geyser;
+          }
+        }
+      }
+    }
+  }
+
+  &--tooltip {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $geyser;
+
+    &.dashboard-card {
+      padding: 0 0 5px 0;
+      border-radius: 0;
+      margin-bottom: 5px;
+    }
+
+    .notifications-item {
+      &__data {
+        &__text {
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  $side-content-width: 40px;
+
+  &__data {
+    width: calc(100% - #{$side-content-width});
+
+    &__title,
+    &__text {
+      color: $mine-shaft;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    &__title {
+      font-weight: bold;
+
+      &:before {
+        display: inline-block;
+        content: '';
+        vertical-align: middle;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $watermelon;
+        margin-right: 7px;
+        margin-bottom: 3px;
+        transition: 0.3s background-color;
+      }
+    }
+
+    &__text,
+    &__date {
+      font-weight: normal;
+    }
+
+    &__date {
+      color: $jumbo;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+
+  &__custom-content {
+    width: $side-content-width;
+    display: flex;
+  }
+
+  .more-options {
+    top: calc(50% - 24px);
+    right: 25px;
+    cursor: pointer;
+    z-index: 2;
+
+    &__list {
+      right: -120px;
+
+      &:before {
+        top: -6px;
+      }
+    }
+
+    &__item {
+      width: 159px;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .remove-btn {
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    background: 0;
+
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+
+  .avatar {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  &__link {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@import '../../../../styles/mixins/bootstrap.scss';
+@import '../../../../styles/variables';
+
+.dashboard-header {
+  @include make-col(12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  padding: 30px 32px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+  &__title {
+    z-index: 2;
+    color: $mine-shaft;
+    font-size: 28px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__items-count {
+    color: $mine-shaft;
+    font-size: 14px;
+
+    strong {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  &__content,
+  &__additional-content {
+    display: flex;
+  }
+
+  .more-options {
+    position: relative;
+    margin-left: 8px;
+
+    &:before {
+      content: '?';
+      font-size: 12px;
+      font-weight: bold;
+      color: $mine-shaft;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $mine-shaft;
+      border-radius: 50%;
+    }
+
+    &__list {
+      right: auto;
+      left: -20px;
+    }
+
+    &__item {
+      width: 230px;
+    }
+  }
+
+  .multiple-offers {
+    display: flex;
+    align-items: center;
+
+    h5 {
+      line-height: 1.4;
+      color: $black;
+      font-weight: 300;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+
+    &__ico {
+      display: flex;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: $turquoise;
+      margin-right: 15px;
+      position: relative;
+
+      &:after {
+        display: block;
+        content: 'U';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+    }
+
+    &__col {
+      &__wrapper {
+        display: flex;
+        align-items: center;
+
+        span {
+          color: $black;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+
+      &--upload {
+        position: relative;
+        cursor: pointer;
+
+        .multiple-offers__col__wrapper {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          z-index: 1;
+        }
+
+        .react-csv-input {
+          position: relative;
+          z-index: 2;
+          opacity: 0;
+          width: 170px;
+
+          .csv-input {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &--download {
+        position: relative;
+        z-index: 3;
+        border: 0;
+        background: 0;
+
+        &:hover,
+        &:focus {
+          outline: none;
+        }
+
+        .multiple-offers__ico {
+          &:after {
+            content: 'D';
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

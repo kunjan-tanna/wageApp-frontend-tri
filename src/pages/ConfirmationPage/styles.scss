@@ -1,0 +1,56 @@
+.modal-alternative {
+  &--account-confirm {
+    &__loader {
+      position: relative;
+
+      .spinner {
+        &.account-confirm {
+          padding-top: 30px;
+        }
+      }
+    }
+
+    .modal-alternative {
+      &__header {
+        position: relative;
+        padding-bottom: 32px;
+        padding-top: 32px;
+
+        h2 {
+          margin-bottom: 0;
+          text-align: center;
+          line-height: 24px;
+        }
+
+        button {
+          position: absolute;
+          right: 24px;
+          top: calc(50% - 11.5px);
+          background: 0;
+        }
+      }
+
+      &__content {
+        padding-top: 34px;
+        min-height: 130px;
+
+        p {
+          text-align: center;
+        }
+      }
+
+      &__navigation {
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

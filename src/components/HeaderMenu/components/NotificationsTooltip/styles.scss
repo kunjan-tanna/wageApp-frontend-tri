@@ -1,0 +1,41 @@
+@import '../../../../styles/variables';
+
+.tooltip {
+
+  &--notifications {
+    padding: 24px;
+    width: 390px;
+    top: 45px;
+    right: -30px;
+
+    &:before {
+      left: unset;
+      right: 30px;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 141px;
+      margin-top: 20px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-notifications {
+    &__row {
+      padding-left: 0;
+    }
+  }
+
+  .no-items {
+    margin: 0;
+    font-size: 14px;
+  }
+}

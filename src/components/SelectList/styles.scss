@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+$column-width: 210px;
+$column-gap: 0;
+
+@mixin columns($number) {
+  columns: $number;
+  width: $number * $column-width;
+}
+
+.selectList {
+  color: $mine-shaft;
+  column-gap: $column-gap;
+  
+  &--columns1 {
+    width: $column-width;
+    margin: -16px -32px;
+
+    .selectList__item--selected {
+      border-radius: 0;
+    }
+  }
+
+  &--columns2 { @include columns(2); }
+
+  &--columns3 { @include columns(3); }
+
+  &--columns4 { @include columns(4); }
+
+  &__item {
+    margin-bottom: 2px;
+    width: 100%;
+    break-inside: avoid;
+    
+    &:hover {
+      font-weight: bold;
+    }
+
+    &--selected {
+      background-color: $selago;
+      background-image: url(./tick.svg);
+      background-size: contain;
+      background-position: right 7px center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+
+      &:hover {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__label {
+    padding: 16px 50px 16px 22px;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 1;
+    margin-bottom: 0;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  &__input {
+    display: none;
+  }
+}

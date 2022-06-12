@@ -1,0 +1,57 @@
+@import '../../../../styles/variables';
+
+.about-app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__photo,
+  &__text {
+    width: 50%;
+  }
+
+  &__text {
+    padding-top: 82px;
+    padding-left: 35px;
+    padding-right: 59px;
+    color: $mine-shaft;
+
+    h3,
+    p {
+      margin-bottom: 29px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .btn {
+    &--b {
+      width: 159px;
+      margin-top: 13px;
+
+      &-color {
+        width: 205px;
+        margin-left: 19px;
+      }
+    }
+  }
+
+  &__photo {
+    img {
+      max-width: 100%;
+      height: fit-content;
+      width: 100%;
+      border-bottom-right-radius: 0;
+      // object-fit: cover;
+    }
+  }
+}

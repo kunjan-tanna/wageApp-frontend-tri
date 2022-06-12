@@ -1,0 +1,32 @@
+@import '../../../../styles/variables';
+
+.input-wrapper {
+  margin-bottom: 16px;
+  position: relative;
+  padding: 28px 24px;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+  background: $white;
+
+  &__label {
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $mine-shaft;
+
+    &__optional {
+      margin-left: 3px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      color: $jumbo;
+    }
+  }
+
+  &--map {
+    padding-bottom: 230px;
+  }
+}

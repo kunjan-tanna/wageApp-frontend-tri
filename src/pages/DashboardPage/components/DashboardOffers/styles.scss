@@ -1,0 +1,28 @@
+@import "../../../../styles/variables.scss";
+
+.dashboard-offers-header {
+  border-bottom: 1px solid $geyser;
+  display: flex;
+  align-items: center;
+  margin: 0 -32px 0 -32px;
+  padding: 0 32px 0 32px;
+  justify-content: space-between;
+}
+
+.dashboard {
+
+  .offerList {
+
+    &__list {
+
+      &--grid {
+        column-width: auto;
+        column-count: 4;
+
+        .offerList__item {
+          width: 185px;
+        }
+      }
+    }
+  }
+}

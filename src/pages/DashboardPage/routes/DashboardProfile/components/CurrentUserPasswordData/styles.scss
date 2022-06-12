@@ -1,0 +1,9 @@
+@import "../../../../../../styles/mixins/bootstrap.scss";
+@import "../../../../../../styles/variables.scss";
+
+.password-data {
+  border-bottom: 0;
+  @include make-col(12);
+  justify-content: space-between;
+  align-items: center;
+}

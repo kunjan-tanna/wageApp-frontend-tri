@@ -1,0 +1,101 @@
+@import '../../../../../../styles/variables';
+@import '../../variables';
+
+.chat {
+  &__messages-list {
+    width: $messages-list-width;
+    height: 100%;
+    min-height: 520px;
+    box-sizing: border-box;
+    border-right: 1px $geyser solid;
+
+    .react-tabs {
+      height: 100%;
+
+      &__tab-list {
+        height: $messages-header-height;
+      }
+
+      &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--size3 {
+          width: auto;
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: 40px;
+          margin-left: 30px;
+          position: relative;
+
+          &:before {
+            content: '';
+            display: block;
+            position: relative;
+            left: -38px;
+            height: 16px;
+            width: 1px;
+            background-color: $geyser;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:first-of-type {
+            &:before {
+              display: none;
+            }
+          }
+        }
+
+        &--selected {
+          &:after {
+            background: $turquoise;
+            width: 100%;
+            margin-left: 0;
+            left: 0;
+          }
+        }
+      }
+
+      &__tab-panel {
+        &--selected {
+          height: calc(100% - #{$messages-header-height});
+        }
+
+        .messages-list {
+          $extra-margin-bottom: 23px;
+          height: calc(100% - #{$extra-margin-bottom});
+          list-style: none;
+          margin: 0 0 $extra-margin-bottom 23px;
+          padding: 23px 0 0 0;
+
+          .scrollarea {
+            margin: 0 8px 0 0;
+            padding: 0 15px 0 0;
+
+            .scrollbar-container {
+              background: 0 !important;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      margin: 23px;
+      font-size: 14px;
+    }
+  }
+}
+
+.chat__messages-list .react-tabs__tab--size3 {
+  margin-right: 30px;
+  margin-left: 24px;
+}
+
+.chat__messages-list .react-tabs__tab--size3:before {
+  left: -29px;
+}

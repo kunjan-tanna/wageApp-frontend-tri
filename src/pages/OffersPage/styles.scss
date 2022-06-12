@@ -1,0 +1,7 @@
+@import '../../styles/mixins/bootstrap.scss';
+
+.offers {
+  &__container {
+    @include make-container;
+  }
+}

@@ -1,0 +1,63 @@
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+  }
+}
+
+.loading {
+  &__container {
+    position: relative;
+  }
+
+  &__isLoading {
+    position: relative;
+    min-height: 300px;
+    transition: all 200ms ease-in-out;
+    background-color: rgba(240, 240, 240, 1);
+  }
+}
+
+.spinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: white;
+  display: flex;
+  padding-top: 100px; // align-items: center;
+  justify-content: center;
+
+  &__indicator {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+
+  &__dot1, &__dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+
+  &__dot2 {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1.0s;
+  }
+}

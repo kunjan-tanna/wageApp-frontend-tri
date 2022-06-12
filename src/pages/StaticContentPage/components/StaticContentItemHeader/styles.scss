@@ -1,0 +1,32 @@
+@import '../../../../styles/variables.scss';
+
+.static-content {
+  &__header {
+    width: 100%;
+    padding: 32px 15px;
+    box-sizing: border-box;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid $geyser;
+      max-width: 1140px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 24px;
+      color: $mine-shaft;
+    }
+  }
+}

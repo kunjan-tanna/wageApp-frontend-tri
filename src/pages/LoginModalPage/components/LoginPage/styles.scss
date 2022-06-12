@@ -1,0 +1,50 @@
+@import '../../../../styles/variables';
+
+.login {
+  .modal-window {
+    &__content {
+      padding-top: 32px;
+    }
+
+    &__sign-up {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 30px;
+
+      a {
+        color: $mine-shaft;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn--link-style {
+    margin-bottom: 32px;
+  }
+
+  .by-social-media {
+    margin-top: 32px;
+  }
+}
+.captcha {
+  position: relative;
+  margin: 0px 0px 4% 22%;
+}
+
+.login {
+  overflow-y: scroll;
+  height: 700px;
+}
+
+// .input--pb-0{
+//   padding-bottom: 0 !important;
+// }
+.login form {
+  position: relative;
+}
+.login p.validation-error {
+  position: absolute;
+  top: 58px;
+  right: 0;
+}

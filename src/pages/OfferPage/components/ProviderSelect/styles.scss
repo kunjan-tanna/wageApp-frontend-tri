@@ -1,0 +1,109 @@
+@import '../../../../styles/mixins/bootstrap.scss';
+@import '../../../../styles/variables';
+
+.provider-list {
+  padding-left: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $geyser;
+    margin-left: 24px;
+    margin-right: 38px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    position: relative;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      top: calc(50% - 8px);
+      right: 0;
+      position: absolute;
+      width: 9px;
+      height: 16px;
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cpath d="M17-5H-9v26h26z"/%3E%3Cpath fill="%23483EE8" fill-rule="nonzero" d="M9 8.013a1.181 1.181 0 0 0-.337-.842L1.973.346A1.142 1.142 0 0 0 .34.342a1.188 1.188 0 0 0-.003 1.661l5.888 6.008-5.887 5.984a1.188 1.188 0 0 0 0 1.661 1.142 1.142 0 0 0 1.634 0l6.69-6.8c.228-.233.341-.539.338-.843z"/%3E%3C/g%3E%3C/svg%3E');
+    }
+
+    &--logged {
+
+      .provider-list {
+
+        &__label {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &--skip {
+      border: none;
+
+      &:after {
+        display: none;
+      }
+
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__image {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &--icon {
+      background-color: $portage;
+      border: 2px solid $white;
+    }
+
+    img {
+      width: 38px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid $white;
+    }
+  }
+
+  &__label {
+    color: $mine-shaft;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .track-vertical {
+    right: 14px;
+
+    div {
+      width: 7px !important;
+      height: 100px !important;
+      border-radius: 3px !important;
+      background-color: $portage !important;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: $mine-shaft;
+    text-align: left;
+    font-weight: bold;
+  }
+}

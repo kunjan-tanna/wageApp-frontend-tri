@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.error-tooltip {
+  .more-options {
+    position: relative;
+    margin-left: 8px;
+    display: inline-block;
+
+    &:before {
+      content: '!';
+      font-size: 12px;
+      font-weight: bold;
+      color: $watermelon;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $watermelon;
+      border-radius: 50%;
+    }
+
+    &__list {
+      top: 0;
+      right: auto;
+      left: 24px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &--right {
+      .more-options__list {
+        right: 24px;
+        left: auto;
+      }
+    }
+
+    &__item {
+      width: 300px;
+      font-size: 12px;
+      padding: 15px;
+    }
+  }
+}

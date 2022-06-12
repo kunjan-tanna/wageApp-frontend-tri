@@ -1,0 +1,10 @@
+declare module 'google-map-react/utils';
+declare module 'points-cluster';
+declare module 'yup/lib/locale';
+declare module 'react-lines-ellipsis';
+declare module 'react-scroll-wheel-handler';
+declare module 'react-csv-reader';
+declare module 'react-geocode/utils';
+declare module 'react-places-autocomplete';
+declare module 'react-scroll-to-bottom';
+declare module 'detect-browser';

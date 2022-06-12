@@ -1,0 +1,45 @@
+@import "../../../../../../styles/variables.scss";
+
+$wide-full: 100%;
+
+.dropzone {
+  border-radius: 5px;
+  bottom: 18px;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__content {
+    outline: 0;
+  }
+
+  &__button {
+    font-size: 14px;
+    color: $mine-shaft;
+    line-height: 18px;
+    max-width: 50px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  &.stretch {
+    bottom: 0;
+    height: $wide-full;
+    padding: 0;
+    width: $wide-full;
+
+    .dropzone__content {
+      width: $wide-full;
+      height: $wide-full;
+    }
+
+    .dropzone__button {
+      width: $wide-full;
+      height: $wide-full;
+    }
+  }
+}

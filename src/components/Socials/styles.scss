@@ -1,0 +1,24 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+
+  &__item {
+    margin-right: 14px;
+
+    .icon {
+      width: 28px;
+      height: 28px;
+
+      &--twitter {
+        width: 29px;
+      }
+    }
+
+    .SocialMediaShareButton {
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

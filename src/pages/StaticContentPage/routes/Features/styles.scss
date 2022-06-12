@@ -1,0 +1,55 @@
+@import "../../../../styles/variables";
+
+.features {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 33.33%;
+    padding: 57px 60px 48px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid $geyser;
+    border-right: 1px solid $geyser;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      border-top: 0;
+    }
+
+    &:nth-of-type(3n) {
+      border-right: 0;
+    }
+
+    p {
+      line-height: 24px;
+      font-size: 16px;
+      color: $mine-shaft;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    i {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 33px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    color: $mine-shaft;
+    font-weight: normal;
+    margin-bottom: 16px;
+  }
+}

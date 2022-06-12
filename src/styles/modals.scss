@@ -1,0 +1,146 @@
+.ReactModal {
+  &__Overlay {
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+  }
+}
+
+$modal-wrapper-padding: 25px;
+$modal-max-width: 590px;
+
+.modal-window-wrapper {
+  width: 100%;
+  padding: $modal-wrapper-padding;
+  border: 0;
+  background: 0;
+}
+
+.modal-window {
+  width: 100%;
+  max-width: $modal-max-width;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+  color: $mine-shaft;
+  font-size: 15px;
+  line-height: 24px;
+  color: $mine-shaft;
+  text-align: center;
+  transition: all 0.5s ease;
+  background: $white;
+
+  h2 {
+    margin: 0;
+    padding: 0 52px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    margin-top: -8px;
+    display: block;
+    border: 0;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"%3E%3Cpath fill="%23333" fill-rule="nonzero" d="M8 6.586L14.293.293a1 1 0 0 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 1 1-1.414-1.414L6.586 8 .293 1.707A1 1 0 1 1 1.707.293L8 6.586z"/%3E%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    span {
+      height: 1px;
+      width: 1px;
+      position: absolute;
+      overflow: hidden;
+      top: -10px;
+    }
+  }
+
+  &__go-back {
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    left: 36px;
+    top: 50%;
+    margin-top: -8px;
+    display: block;
+    border: 0;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8"%3E%3Cpath fill="%23333" fill-rule="evenodd" d="M15.956 2.971H4.366l1.294-1.28a.982.982 0 0 0 0-1.4 1.007 1.007 0 0 0-1.415 0l-3 2.97a.973.973 0 0 0-.283.638.965.965 0 0 0 .061.411c.001.01.004.019.007.027a.99.99 0 0 0 .2.291c.008.01.01.021.02.03l3 2.971a1.008 1.008 0 0 0 1.415 0 .982.982 0 0 0 0-1.4L4.37 4.95h11.585a.99.99 0 1 0 0-1.978z"/%3E%3C/svg%3E%0A');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: unset;
+  }
+
+  &__header {
+    position: relative;
+    padding: 32px 0;
+    border-bottom: 1px $geyser solid;
+  }
+
+  &__header--sign-up {
+    padding-bottom: 10px;
+    border: 0;
+  }
+
+  &__content {
+    padding: 32px 24px;
+
+    &__text-before {
+      margin: 30px 0;
+    }
+  }
+
+  .input,
+  .checkbox {
+    position: relative;
+    padding-bottom: 32px;
+
+    .validation-error {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .checkbox {
+    text-align: center;
+
+    .validation-error {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+.modal-under-window {
+  width: 100%;
+  max-width: $modal-max-width;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: $mine-shaft;
+
+  &--sign-up {
+    padding-top: 0;
+  }
+
+  a {
+    color: $mine-shaft;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

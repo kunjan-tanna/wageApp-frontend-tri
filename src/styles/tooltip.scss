@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.react-tooltip-lite {
+  background: $white;
+  color: $mine-shaft;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+
+  &-arrow {
+    border-color: $white;
+  }
+}
+//@todo remove

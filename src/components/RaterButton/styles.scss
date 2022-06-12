@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+$react-rater-link: $white !default; // color of star not rated
+$react-rater-hover: $royal-blue !default; // color of star on hover
+$react-rater-active: $royal-blue !default; // color of star rated
+
+.rater-button {
+  margin-top: 5px;
+
+  .react-rater-star {
+    color: #000;
+    font-size: 20px;
+    margin-right: 5px;
+
+    &.is-disabled:hover {
+      color: #000;
+    }
+
+    &:hover,
+    &.is-active,
+    &.is-active:hover,
+    &.will-be-active,
+    &.is-active-half:before {
+      color: $react-rater-active;
+    }
+  }
+}

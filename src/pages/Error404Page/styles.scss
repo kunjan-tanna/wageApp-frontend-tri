@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.error-404 {
+  min-height: 300px;
+  padding-top: 50px;
+  color: $watermelon;
+}
+#main {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#sidebar {
+  width: 20%;
+  min-height: 400px;
+  // background: red;
+  float: left;
+}
+button.gohomeBtn {
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  background: #00d192;
+  color: #fff;
+  padding: 10px 20px 10px 28px;
+  outline: none;
+  position: relative;
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+button.gohomeBtn:focus {
+  outline: none;
+}
+button.gohomeBtn:before {
+  content: '';
+  position: absolute;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(136deg);
+  top: 15px;
+  left: 13px;
+  pointer-events: none;
+}
+.pagenotfound {
+  text-align: center;
+  padding: 0 0 56px;
+}
+img.notfoundImg {
+  width: 80%;
+  margin: 0 auto;
+}
+.pagenotFoundBtmBtn {
+  display: flex;
+  justify-content: center;
+}
+.pagenotFoundBtmBtn a {
+  margin: 0 6px;
+}
+#page-wrap {
+  width: 100%;
+}
+
+.clear:after {
+  clear: both;
+  display: table;
+  content: '';
+}

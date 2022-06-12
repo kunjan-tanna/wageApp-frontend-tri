@@ -1,0 +1,144 @@
+@import '../../styles/variables.scss';
+
+@mixin clear-button() {
+  text-transform: unset;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $white;
+  background-position: center right 12px;
+  background-repeat: no-repeat;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: none;
+  padding: 0 24px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 21px;
+  user-select: none;
+  color: $royal-blue;
+  cursor: pointer;
+  background: $white;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &--active,
+  &:hover {
+    background-color: $turquoise;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $jungle-green;
+    color: $white;
+  }
+
+  &--drop {
+    width: 64px;
+    height: 56px;
+    justify-content: center;
+    border-radius: none;
+    mask-image: url(./drop.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    padding: initial;
+    padding-left: 8px;
+  }
+
+  &--add {
+    display: flex;
+    align-items: center;
+    border: 2px solid $white;
+    background: transparent;
+    color: $white;
+    padding: 0 23px 0 30px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 27px;
+      height: 24px;
+      background-image: url(./drop_plus.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: -12px;
+      top: 6px;
+    }
+
+    &--active,
+    &:hover {
+      background: transparent;
+      border-color: $turquoise;
+
+      &::after {
+        background-image: url(./drop_plus-active.svg);
+      }
+    }
+  }
+
+  &--fixed-width {
+    width: 159px;
+    padding-left: 8px;
+    padding-right: 8px;
+    justify-content: center;
+  }
+
+  &--icon {
+    width: 40px;
+    height: 40px;
+    padding: initial;
+  }
+
+  &--clear-right,
+  &--clear-right:hover,
+  &--clear-right:active {
+    @include clear-button();
+    background-image: url(./right.svg);
+    padding-right: 40px;
+  }
+
+  &--clear-reset,
+  &--clear-reset:hover,
+  &--clear-reset:active {
+    @include clear-button();
+    background-image: url(./reset.svg);
+    padding-right: 40px;
+  }
+
+  &--clear,
+  &--clear:hover,
+  &--clear:active {
+    @include clear-button();
+    color: $mine-shaft;
+  }
+
+  &--clear2,
+  &--clear2:hover,
+  &--clear2:active {
+    @include clear-button();
+    color: $portage;
+  }
+}
+
+.button--drop {
+  font-size: 11px;
+  line-height: 12px;
+}

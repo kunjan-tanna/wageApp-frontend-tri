@@ -1,0 +1,35 @@
+@import "../../../../../../styles/variables";
+
+.faq {
+
+  &__search {
+    padding-bottom: 16px;
+
+    &__form {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .inputFieldAlternative {
+      width: 100%;
+
+      &__input {
+        background-color: $selago;
+        color: $mine-shaft;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      &__placeholder {
+        color: $mine-shaft;
+        font-size: 16px;
+      }
+    }
+
+    .inputFieldAlternative__input:focus + .inputFieldAlternative__placeholder,
+    .inputFieldAlternative__input:not(:placeholder-shown) + .inputFieldAlternative__placeholder {
+      color: $mine-shaft;
+    }
+  }
+}

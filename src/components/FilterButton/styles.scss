@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+.filterButton {
+  margin: 0;
+  margin-right: 10px;
+  padding: 4px 35px 4px 14px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid $medium-purple;
+  border-radius: 6px;
+  height: 32px;
+  color: $white;
+  user-select: none;
+  background-color: transparent;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &__clear {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 100%;
+    text-indent: -2000em;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(./inactive.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transform: rotate(180deg);
+    transition: 200ms all ease-in-out;
+    pointer-events: none;
+  }
+
+  &--active, &:hover, &:active {
+    background-color: transparent;
+    border-color: $white;
+  }
+  
+  &--active {
+    &::after {
+      transform: rotate(0);
+    }
+  }
+
+  &--selected {
+    background-color: $white;
+    color: $royal-blue;
+    border-color: $white;
+
+    &::after {
+      transition: none;
+      background-image: url(./close.svg);
+    }
+
+    &--active, &:hover, &:active {
+      background-color: $white;
+      color: $royal-blue;
+    }
+
+    & .filterButton__clear {
+      display: block;
+      opacity: 0;
+    }
+  }
+}

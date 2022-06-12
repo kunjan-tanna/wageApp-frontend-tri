@@ -1,0 +1,43 @@
+@import '../../../../styles/variables';
+
+.notifications {
+  flex-direction: column;
+
+  &__heading {
+    display: flex;
+    font-size: 12px;
+    color: $jumbo;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &:after,
+    &:before {
+      content: '';
+      display: inline-block;
+      width: calc(100% - 6px);
+      height: 1px;
+      background-color: $geyser;
+    }
+
+    &:before {
+      margin-right: 6px;
+    }
+
+    &:after {
+      margin-left: 6px;
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.no-notifications {
+  width: calc(100% - 64px);
+  margin: 32px;
+  font-size: 16px;
+  color: $mine-shaft;
+}

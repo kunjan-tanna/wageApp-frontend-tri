@@ -1,0 +1,15 @@
+@mixin spinner($size, $borderWidth, $bgColor, $progressColor) {
+
+  width: $size;
+  height: $size;
+  border: 1px solid $bgColor;
+  border-radius: 50%;
+  border-top: 1px solid $progressColor;
+  animation: spin 2s linear infinite;
+
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

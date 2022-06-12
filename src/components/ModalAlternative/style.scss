@@ -1,0 +1,90 @@
+@import '../../styles/variables.scss';
+
+.modal-alternative {
+  max-width: 591px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  border-radius: 0;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+  padding-bottom: 33px;
+
+  &--pink-style {
+    .modal-alternative {
+      &__content {
+        min-height: 100px;
+        margin-top: 42px;
+        position: relative;
+        text-align: center;
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .btns {
+      margin: 36px 0 16px 0;
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        max-width: 176px;
+        margin: 0 8px;
+      }
+    }
+
+    .spinner {
+      padding-top: 0;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 16px 24px;
+    width: 100%;
+    border-bottom: 1px solid $geyser;
+    color: $mine-shaft;
+
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 28px;
+      color: $mine-shaft;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: calc(50% - 26px / 2);
+      right: 34px;
+      outline: none;
+      border: none;
+      background: none;
+    }
+  }
+
+  &__content {
+    padding-left: 87px;
+    padding-right: 87px;
+
+    p {
+      font-size: 16px;
+      color: $mine-shaft;
+      line-height: 24px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      margin-top: 34px;
+    }
+  }
+}

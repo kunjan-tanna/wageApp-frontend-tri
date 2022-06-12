@@ -1,0 +1,175 @@
+@import '../../styles/mixins/bootstrap.scss';
+@import '../../styles/variables.scss';
+
+.page-header {
+  background: $royal-blue;
+  height: 88px;
+  display: flex;
+  align-items: center;
+
+  &__nav-container {
+    @include make-row;
+
+    &__logo {
+      @include make-col(2);
+      padding-left: 41px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo-image {
+      height: 38px;
+    }
+
+    &__search-form {
+      @include make-col(6);
+    }
+
+    &__nav-menu {
+      max-width: 33.33%;
+      display: flex;
+      margin-left: auto;
+      padding-right: 36px;
+
+      > ul {
+        @include make-row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        > li {
+          display: block;
+        }
+      }
+
+      .tooltip {
+        &--header {
+          padding-bottom: 0;
+          right: 10px;
+
+          &:before {
+            left: auto;
+            right: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &__subMenu {
+    list-style: none;
+    padding: 0;
+    margin: -12px 0;
+    width: 120px;
+
+    &__item {
+      font-size: 14px;
+      line-height: 3;
+      color: $mine-shaft;
+
+      &:hover {
+        text-decoration: none;
+        font-weight: bold;
+        color: $mine-shaft;
+      }
+
+      .icon {
+        margin-right: 12px;
+
+        &--messages {
+          &-color {
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    &__about {
+      width: 240px;
+      margin: 20px -32px 0;
+      padding: 16px 21px;
+      border-radius: 0px;
+      box-sizing: border-box;
+      background: $selago;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          width: 50%;
+          margin: 3px 0;
+
+          a {
+            font-size: 12px;
+            line-height: 24px;
+            color: $mine-shaft;
+          }
+        }
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__search {
+    &__tabs {
+      @include make-row;
+      margin-bottom: 0;
+      padding: 0;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+.search-form {
+  background: silver;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  &__field {
+    &__search,
+    &__location {
+      @include make-col(4);
+    }
+
+    &__radius,
+    &__button {
+      @include make-col(2);
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.selectAlternative__overlay::before {
+  width: 33px !important;
+}
+.page-header__nav-container__nav-menu {
+  max-width: 40.33%;
+}
+.page-header__nav-container__nav-menu > ul > li {
+  position: relative;
+}
+
+.topInfo {
+  margin: 20px;
+  text-align: center;
+}
+
+.topInfo label {
+  line-height: 0px;
+}

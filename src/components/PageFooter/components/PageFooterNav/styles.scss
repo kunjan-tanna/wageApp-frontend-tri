@@ -1,0 +1,71 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins/bootstrap.scss';
+
+.page-footer {
+  &__footer-menu {
+    height: 105px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: $white;
+    background-color: $governor-bay;
+
+    .container {
+      height: 100%;
+    }
+
+    &__container {
+      height: 100%;
+      @include make-row;
+      align-content: space-between;
+      overflow: hidden;
+    }
+
+    &__menu,
+    &__rest {
+      height: 100%;
+      @include make-col(6);
+    }
+
+    &__menu {
+      .page-footer__footer-menu__list {
+        li {
+          margin-right: 16px;
+
+          a {
+            color: $white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &__rest {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .copyright {
+        margin: 0 18px 0 0;
+      }
+
+      .page-footer__footer-menu__list {
+        li {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    &__rest ul {
+      justify-content: flex-end;
+    }
+
+    &__list {
+      height: 100%;
+      @include make-row;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
